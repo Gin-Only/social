@@ -1,12 +1,11 @@
 import matplotlib
-# 强制使用Agg后端，解决渲染/保存错误
 matplotlib.use('Agg')  
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 
 class AW_ALouvain:
-    """自适应权重属性感知Louvain算法实现（修复社区映射问题）"""
+    """自适应权重属性感知Louvain算法实现"""
     def __init__(self, G, node_attr, max_iter=10, epsilon=1e-4):
         """
         初始化参数
@@ -294,4 +293,5 @@ if __name__ == "__main__":
     high_risk = rumor_spreader_identification(G, final_community)
     
     # 显示图片（若使用Agg后端，plt.show()会报错，注释即可）
+
     # plt.show()
